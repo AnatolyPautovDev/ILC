@@ -1,5 +1,5 @@
 @font-face {
-    font-family: 'GothamPro';
+    font-family: 'Gotham Pro';
     src: url(./fonts/GothamPro.woff2);
     font-weight: 400;
     font-style: normal;
@@ -7,7 +7,7 @@
 }
 
 @font-face {
-    font-family: 'GothamPro';
+    font-family: 'Gotham Pro';
     src: url(./fonts/GothamPro-Light.woff2);
     font-weight: 300;
     font-style: normal;
@@ -15,7 +15,7 @@
 }
 
 @font-face {
-    font-family: 'GothamPro';
+    font-family: 'Gotham Pro';
     src: url(./fonts/GothamPro-Medium.woff2);
     font-weight: 500;
     font-style: normal;
@@ -23,7 +23,7 @@
 }
 
 @font-face {
-    font-family: 'GothamPro';
+    font-family: 'Gotham Pro';
     src: url(./fonts/GothamPro-Bold.woff2);
     font-weight: 700;
     font-style: normal;
@@ -31,7 +31,7 @@
 }
 
 @font-face {
-    font-family: 'GothamPro';
+    font-family: 'Gotham Pro';
     src: url(./fonts/GothamPro-Italic.woff2);
     font-weight: 400;
     font-style: italic;
@@ -74,7 +74,7 @@
     --border-radius-button: 15px;
     --border-radius-box: 10px;
 
-    --font-family-base: 'GothamPro', sans-serif;
+    --font-family-base: 'Gotham Pro', sans-serif;
     --font-family-accent: 'Roboto', sans-serif;
 
     --button-height: 56px;
@@ -138,11 +138,30 @@ a {
     line-height: 1.375;
 }
 
+.title-small {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
 .title-big {
     color: #262626;
     font-size: clamp(24px, 3.3333vw, 48px);
     /* font-size: 48px; */
     line-height: 1.145; 
+}
+
+.title-purple {
+    line-height: 44px;
+    background: linear-gradient(180deg, #4614e8 0%, #bca7ff 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.title-sirius {
+    font-family: 'ArtegraSansEx';
+    font-weight: 900;
+    letter-spacing: 2.72px;
 }
 
 .button {
@@ -307,7 +326,7 @@ a {
 
 .about-info-box {
     position: relative;
-    margin-top: -80px;
+    margin-top: -82px;
     margin-inline: auto 0;
     max-width: 712px;
     padding: 32px 39px;
@@ -330,6 +349,145 @@ a {
     font-weight: 500;
     line-height: 1.625;
 }
+
+.support {
+    padding-top: 187px;
+}
+
+.support-wrapper {
+    display: flex;
+    column-gap: 75px;
+}
+
+.support-body {
+    padding-top: 30px;
+    max-width: 438px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+}
+
+.support-logo:not(:last-child) {
+    margin-bottom: 16px;
+}
+
+.support-indicators {
+    max-width: 492px;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 25px;
+    row-gap: 17px;
+    align-items: flex-start;
+    
+}
+
+.support-indicators-item {
+    display: flex;
+    flex-direction: column;
+    /* row-gap: 8px; */
+    border-radius: 10px;
+    background: linear-gradient(236deg, #FFF 29.99%, #F4F9FF 79.17%);
+    box-shadow: 0px 4px 100px 0px rgba(208, 218, 227, 0.57);
+    transition-duration: var(--transition-duration);
+}
+
+.support-indicators-item:nth-child(n+2){
+    max-width: 179px;
+    width: 100%;
+    padding: 24px;
+}
+.support-indicators-item:nth-child(3n+1){
+    max-width: 217px;
+    width: 100%;
+    padding: 32px; 
+}
+.support-indicators-item:nth-child(2){
+    position: relative;
+    align-self: flex-end;
+}
+
+.support-indicators-item:nth-child(2)::after {
+    content: '';
+    position: absolute;
+    top: -64px;
+    left: 146px;
+    z-index: -1;
+    width: 159px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: linear-gradient(90deg, #E1D8FF 21.57%, #F4ECFF 100%);
+}
+
+.support-indicators-item:nth-child(3){
+    margin-left: 40px;
+    position: relative;
+}
+
+.support-indicators-item:nth-child(3)::after {
+    content: '';
+    position: absolute;
+    top: -12px;
+    left: -21px;
+    z-index: -1;
+    width: 39px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: linear-gradient(90deg, #E1D8FF 21.57%, #F4ECFF 100%);
+}
+
+.support-indicators-item:nth-child(4){
+    max-width: 192px;
+    position: relative;
+}
+
+.support-indicators-item:nth-child(4)::after {
+    content: '';
+    position: absolute;
+    top: 30px;
+    left: -13px;
+    z-index: -1;
+    width: 25px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: linear-gradient(90deg, #E1D8FF 21.57%, #F4ECFF 100%);
+}
+
+.support-indicator-title-big {
+    font-size: 48px;
+}
+
+.support-indicator-title-medium {
+    font-size: 36px;
+}
+
+.support-subjects {
+    padding-top: 48px;
+}
+
+.support-subjects-caption {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.support-subjects-inner {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.support-subjects-item {
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+    padding: 32px;
+    background-color: var(--color-light);
+    border-radius: var(--border-radius-box);
+}
+
+.support-subject-image {
+    align-self: center;
+}
+
 
 @media (max-width: 1200px) {
     .about-image-wrapper {
@@ -366,6 +524,9 @@ a {
         margin-top: 0;
         margin-inline: auto;
     }
+    .support {
+        padding-top: 100px;
+    }
 }
 
 @media (max-width: 1024px) {
@@ -374,6 +535,19 @@ a {
     }
     .header-logo {
         column-gap: 36px;
+    }
+    .support-wrapper {
+        flex-direction: column;
+        column-gap: 0px;
+        row-gap: 100px;
+        align-items: center;
+    }
+    .support-body {
+        text-align: center;
+        align-items: center;
+    }
+    .support-logo {
+        margin-left: 120px;
     }
 }
 
@@ -400,6 +574,58 @@ a {
     }
     .about-info-text {
         font-size: 14px;
+    }
+    .support {
+        padding-top: 60px;
+    }
+    .support-logo:not(:last-child){
+        margin-bottom: 8px;
+    }
+    .support-indicators {
+        max-width: 288px;
+        column-gap: 16px;
+        row-gap: 16px;
+    }
+    .support-indicators-item:nth-child(n+2){
+        max-width: 124px;
+        padding: 16px;
+    }
+    .support-indicators-item:nth-child(3n+1){
+        max-width: 140px;
+        padding: 16px;
+    }
+    .support-indicators-item:nth-child(3) {
+        margin-left: 16px;
+    }
+    .support-indicators-item:nth-child(4){
+        max-width: 132px;
+        padding: 16px;
+    }
+    .support-indicators-item:nth-child(2)::after {
+        top: -46px;
+        left: 73px;
+        width: 100px;
+    }
+    .support-indicator-title-big {
+        font-size: 32px;
+    }
+    .support-indicator-title-medium {
+        font-size: 32px;
+    }
+    .support-indicator-description {
+        font-size: 10px;
+    }
+    .support-subjects-caption {
+        margin-bottom: 24px;
+    }
+    .support-subjects-inner {
+        grid-template-columns: 344px;
+        justify-content: center;
+        gap: 8px;
+    }
+    .support-subjects-item {
+        align-items: center;
+        text-align: center;
     }
 }
 
