@@ -167,6 +167,7 @@ a {
 .button {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     height: var(--button-height);
 
     font-size: 16px;
@@ -488,6 +489,110 @@ a {
     align-self: center;
 }
 
+.advantages {
+    padding-top: 144px;
+}
+
+.advantages-title {
+    text-align: center;
+}
+
+.advantages-body {
+    padding-top: 32px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.advantages-image-wrapper {
+    position: relative;
+    display: inline-flex;
+    flex-shrink: 0;
+    margin-right: 80px;
+}
+
+.advantages-question-box {
+    position: absolute;
+    top: -20px;
+    left: 78px;
+    width: 190px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 7px;
+    border-radius: var(--border-radius-box);
+    background: linear-gradient(326deg, #F0EBFF 11.53%, #FFF 74.32%);
+    box-shadow: 0px 13.528px 39.787px 0px rgba(187, 166, 255, 0.78);
+    padding: 20px;
+}
+
+.advantages-question-box-text {
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.advantages-button {
+    height: 46px;
+    font-size: 12px;
+    padding-inline: 19px;
+    border-radius: 8px;
+    background: linear-gradient(326deg, #2641D1 11.53%, #3333A3 74.32%);
+}
+
+.advantages-button:hover {
+    transform: translateY(-1px);
+}
+
+.advantages-about {
+    display: flex;
+    padding-top: 10px;
+    column-gap: 50px;
+}
+
+.advantages-about-main {
+    flex-basis: 440px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+.advantages-about-main > p {
+    text-align: justify;
+}
+
+.advantages-about-title {
+    letter-spacing: 2.72px;
+}
+
+.advantages-about-aside {
+    padding-top: 56px;
+}
+
+.advantages-about-aside-list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+    list-style: url(./images/advantages/list.svg);
+    list-style-position: inside;
+}
+
+.advantages-list {
+    display: grid;
+    gap: 19px;
+    grid-template-columns: repeat(5, 1fr);
+    margin-top: -72px;
+    position: relative;
+}
+
+.advantages-list-item {
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+    padding: 32px;
+    border-radius: 20px;
+    background: linear-gradient(236deg, #FFF 29.99%, #F4F9FF 79.17%);
+    box-shadow: 0px 4px 100px 0px rgba(208, 218, 227, 0.57);
+}
+
+
 
 @media screen and (max-width: 1200px) {
     .about-image-wrapper {
@@ -527,6 +632,15 @@ a {
     .support {
         padding-top: 100px;
     }
+    .advantages-list {
+        margin-top: 0;
+        padding-top: 20px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+    .advantages-list-item:last-child {
+        grid-column: 1/-1;
+    }
 }
 
 @media screen and (max-width: 1024px) {
@@ -548,6 +662,19 @@ a {
     }
     .support-logo {
         margin-left: 120px;
+    }
+    .advantages-about {
+        flex-direction: column;
+        row-gap: 20px;
+    }
+    .advantages-about-main {
+        flex-basis: 0;
+    }
+    .advantages-about-aside {
+        padding: 0;
+    }
+    .advantages-about-aside-list {
+        row-gap: 12px;
     }
 }
 
@@ -627,6 +754,18 @@ a {
         align-items: center;
         text-align: center;
     }
+    .advantages {
+        padding-top: 80px;
+    }
+    .advantages-body {
+        padding-top: 48px;
+        flex-direction: column;
+        row-gap: 20px;
+    }
+    .advantages-image-wrapper {
+        align-self: center;
+        margin-right: 0;
+    }
 }
 
 @media screen and (max-width: 576px) {
@@ -655,6 +794,26 @@ a {
         text-align: center;
         align-items: center;
         row-gap: 16px;
+    }
+    .advantages-list {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+    .advantages-question-box {
+        justify-content: center;
+        align-items: center;
+        width: 140px;
+        padding: 16px 4px;
+        top: 12px;
+        left: 110px;
+    }
+    .advantages-question-box-text {
+        font-size: 10px;
+    }
+    .advantages-button {
+        height: 32px;
+        font-size: 10px;
+        padding: 8px;
     }
 }
 
